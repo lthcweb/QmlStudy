@@ -7,7 +7,7 @@ Window {
     width: 640
     height: 480
     visible: true
-    title: qsTr("P18_Signal")
+    title: qsTr("P18 P19_Signal")
     color:'white'
 
 ///////////////////////    第一部分

@@ -1,0 +1,6 @@
+CMakeLists.txt linguist-detectable=false
+*.h  linguist-detectable=true
+*.cpp  linguist-detectable=true
+*.qml  linguist-detectable=true
+
+.qrc linguist-language=Qml

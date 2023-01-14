@@ -1,5 +1,5 @@
 # Qt对cmake版本的最小要求（但测试发现低一点的版本似乎也没问题）
-cmake_minimum_required(VERSION 3.21.1)
+cmake_minimum_required(VERSION 3.16)
 
 # 项目命名
 # VERSION 1.0.0 LANGUAGES CXX: 是可选的
@@ -45,7 +45,8 @@ SET(LIBRARY_OUTPUT_PATH ${OUT_PATH})
 set(QML_IMPORT_PATH ${OUT_PATH})
 
 # 子项目
-# add_subdirectory(Starter5)
-add_subdirectory(P18_Signal)
+#add_subdirectory(Starter5)
+#add_subdirectory(P18_Signal)
+add_subdirectory(P20_QmlAndC++)
 
 
