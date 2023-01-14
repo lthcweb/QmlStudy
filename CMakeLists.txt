@@ -47,6 +47,6 @@ set(QML_IMPORT_PATH ${OUT_PATH})
 # 子项目
 #add_subdirectory(Starter5)
 #add_subdirectory(P18_Signal)
-add_subdirectory(P20_QmlAndC++)
-
+#add_subdirectory(P20_QmlAndC++)
+add_subdirectory(P25_Layout)
 
