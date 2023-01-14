@@ -45,7 +45,7 @@ SET(LIBRARY_OUTPUT_PATH ${OUT_PATH})
 set(QML_IMPORT_PATH ${OUT_PATH})
 
 # 子项目
-add_subdirectory(Starter5)
-# add_subdirectory(Starter6)
+# add_subdirectory(Starter5)
+add_subdirectory(P18_Signal)
 
 
