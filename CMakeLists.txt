@@ -48,5 +48,6 @@ set(QML_IMPORT_PATH ${OUT_PATH})
 #add_subdirectory(Starter5)
 #add_subdirectory(P18_Signal)
 #add_subdirectory(P20_QmlAndC++)
-add_subdirectory(P25_Layout)
-
+#add_subdirectory(P25_Layout)
+#add_subdirectory(P26_CustomGrid)
+add_subdirectory(P29_CustomModel)
