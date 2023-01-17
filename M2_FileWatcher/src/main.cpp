@@ -14,6 +14,12 @@ int main(int argc, char *argv[])
 
     ComponentCreatorEngine engine;
 
+    // 需要热更新的qml目录，会递归查找子目录。
+    engine.AddDirectory(QDir::currentPath() + QDir::separator() + "..");
+    engine.AddDirectory("E:\\QTProject\\Common\\MTheme");
+    engine.Start();
+
+
     engine.rootContext()->setContextProperty("QmlEngine", &engine);
 
     const QUrl url(qgetenv("MAIN_QML"));

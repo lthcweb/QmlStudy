@@ -12,6 +12,10 @@ public:
 
     Q_INVOKABLE void clearCache();
 
+    void AddDirectory(const QString &path);
+
+    void Start();
+
 private:
     FileWatcher* m_fileWatcher;
 

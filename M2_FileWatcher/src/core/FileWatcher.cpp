@@ -15,10 +15,10 @@ FileWatcher::FileWatcher(QObject *parent) :
     // connect timer to callback function
     QObject::connect(&m_timer, &QTimer::timeout, this, &FileWatcher::reloadUI);
 
-    QString dir= QDir::currentPath() + QDir::separator() + "..";
+//    QString dir= QDir::currentPath() + QDir::separator() + "..";
 //    qDebug() << "Watch dir: "  << dir;
 //    setDirectory(QDir::currentPath() + QDir::separator() + ".." + QDir::separator() + ".." + QDir::separator() + "QmlStudy");
-    setDirectory(dir);
+
 }
 
 void FileWatcher::setDirectory(const QString &path)
