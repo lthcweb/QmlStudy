@@ -1,0 +1,23 @@
+# For reference: http://doc.qt.io/qt-5/qtqml-modules-qmldir.html
+
+# 模块名称 导入的时候使用
+module XQuick.SubModule
+# 链接库的名字
+plugin XQuickSubModule
+# 插件使用类名称
+classname XQuickSubModulePlugin
+
+depends XQuick 1.0
+
+# 非Cpp的Item 可以 这样注册 
+# <ResourceIdentifier> <InitialVersion> <File>
+# MyQml 1.0 qrc:/plugin/MyQml.qml
+# MyScript 1.0 qrc:/plugin/MyScript.js
+
+#Test 1.0 	qrc:/Test.qml
+XButton 1.0 qrc:/XButton.qml
+singleton TestSingleton 1.0 qrc:/TestSingleton.qml
+
+
+# 提示文件
+typeinfo plugin.qmltypes

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Test.qml</file>
+        <file>TestSingleton.qml</file>
+        <file>XButton.qml</file>
+    </qresource>
+</RCC>
