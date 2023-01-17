@@ -1,5 +1,5 @@
 # Qt对cmake版本的最小要求（但测试发现低一点的版本似乎也没问题）
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.21.1)
 
 # 项目命名
 # VERSION 1.0.0 LANGUAGES CXX: 是可选的
@@ -24,12 +24,6 @@ set(CMAKE_AUTORCC ON)   # Resource Compiler
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 寻找Qt的库
-# Qt6 COMPONENTS Widgets：寻找Qt库中的Widget模块
-# REQUIRED： 意味着找不到报错并不会继续下去
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Quick LinguistTools)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick LinguistTools)
-
 # 指定输出路径
 SET(OUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 # 如果输入路径不存在，则创建
@@ -44,10 +38,19 @@ SET(LIBRARY_OUTPUT_PATH ${OUT_PATH})
 # 指定 自定模块目录
 set(QML_IMPORT_PATH ${OUT_PATH})
 
+# 寻找Qt的库
+# Qt6 COMPONENTS Widgets：寻找Qt库中的Widget模块
+# REQUIRED： 意味着找不到报错并不会继续下去
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Quick QuickControls2 LinguistTools)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick QuickControls2 LinguistTools)
+
 # 子项目
 #add_subdirectory(Starter5)
 #add_subdirectory(P18_Signal)
 #add_subdirectory(P20_QmlAndC++)
 #add_subdirectory(P25_Layout)
 #add_subdirectory(P26_CustomGrid)
-add_subdirectory(P29_CustomModel)
+#add_subdirectory(P29_CustomModel)
+#add_subdirectory(P30_ChartView_PieSeries)
+add_subdirectory("e:\\QTProject\\Common\\XQuick" ${OUT_PATH})
+add_subdirectory(M1_Plugin)
