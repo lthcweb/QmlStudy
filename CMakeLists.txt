@@ -52,5 +52,6 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick QuickControls2
 #add_subdirectory(P26_CustomGrid)
 #add_subdirectory(P29_CustomModel)
 #add_subdirectory(P30_ChartView_PieSeries)
-#add_subdirectory("E:\\QTProject\\Common\\MTheme" ${OUT_PATH})
-add_subdirectory(M2_FileWatcher)
+#add_subdirectory("E:\\QTProject\\Projets\\App\\qmlStudy\\XQuick" ${OUT_PATH})
+add_subdirectory("E:\\QTProject\\Common\\MTheme" ${OUT_PATH})
+add_subdirectory(M3_Theme)
