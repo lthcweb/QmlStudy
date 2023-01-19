@@ -1,8 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>images/download.svg</file>
-        <file>images/filelist.svg</file>
-        <file>images/music.svg</file>
+        <file>images/media.svg</file>
         <file>images/play.svg</file>
         <file>images/playlist.svg</file>
         <file>images/settings.svg</file>

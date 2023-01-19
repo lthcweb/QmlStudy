@@ -4,7 +4,7 @@ import QtQuick.Controls.Material 2.15
 import MTheme 1.0 as M
 import Qt.labs.settings 1.1
 
-import "./Page"
+
 
 pragma Singleton
 QtObject {
@@ -14,17 +14,17 @@ QtObject {
     property alias themeMode: settings.themeMode
 
 
-    readonly property string primary: M.MColors.primary
-    readonly property string secondary: M.MColors.secondary
-    readonly property string tertiary: M.MColors.tertiary
-    readonly property string quaternary: M.MColors.quaternary
+    readonly property string primary: M.Colors.primary
+    readonly property string secondary: M.Colors.secondary
+    readonly property string tertiary: M.Colors.tertiary
+    readonly property string quaternary: M.Colors.quaternary
 
     property var settings:Settings {
         id:settings
         category: "Theme"
         fileName: global.settingsFileName
 
-        property int themeMode:global.themeMode
+        property int themeMode:0
     }
 
 }

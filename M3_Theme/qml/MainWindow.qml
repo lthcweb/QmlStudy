@@ -8,7 +8,8 @@ import QtQuick.Controls.Material.impl 2.12
 import Qt.labs.settings 1.1
 import MTheme 1.0 as M
 import "."
-import "./Page"
+import "./Pages"
+import "./Components"
 
 
 Page {
@@ -26,7 +27,6 @@ Page {
 
     footer:NavigationBar{
         id:navigationBar
-        anchors.bottom: parent.bottom
     }
 
     SwipeView {
@@ -35,7 +35,7 @@ Page {
         width: parent.width
         currentIndex: navigationBar.currentIndex
 
-        AudioPage{
+        MediaPage{
 
         }
         PlayListPage{
@@ -45,7 +45,7 @@ Page {
         PlayPage{
 
         }
-        DownLoadPage{
+        DownloadPage{
 
         }
 

@@ -3,13 +3,12 @@
         <file>main.qml</file>
         <file>MainWindow.qml</file>
         <file>Global.qml</file>
-        <file>NavigationBar.qml</file>
-        <file>Base/BaseTabBar.qml</file>
-        <file>Base/TextTabButton.qml</file>
-        <file>Page/SettingsPage.qml</file>
-        <file>Page/AudioPage.qml</file>
-        <file>Page/PlayListPage.qml</file>
-        <file>Page/DownLoadPage.qml</file>
-        <file>Page/PlayPage.qml</file>
+        <file>Controls/BaseTabBar.qml</file>
+        <file>Components/NavigationBar.qml</file>
+        <file>Pages/SettingsPage.qml</file>
+        <file>Pages/DownloadPage.qml</file>
+        <file>Pages/MediaPage.qml</file>
+        <file>Pages/PlayListPage.qml</file>
+        <file>Pages/PlayPage.qml</file>
     </qresource>
 </RCC>
