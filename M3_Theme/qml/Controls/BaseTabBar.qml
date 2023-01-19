@@ -62,11 +62,6 @@ TabBar {
 //                }
 //            }
             onClicked: {
-//                repeater.itemAt(bar.lastIndex).imageSource = myModel.get(bar.lastIndex).modelSrc;
-//                repeater.itemAt(bar.lastIndex).textColor = modelColor;
-
-//                image.source = modelSrcG;
-//                text.color = modelColorG;
                 bar.currentIndex = model.index;
             }
         }
