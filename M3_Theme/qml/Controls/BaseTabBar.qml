@@ -8,13 +8,12 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtQuick.Controls.Material 2.15
 import QtGraphicalEffects 1.15
-
-import "../"
 
 TabBar {
     property alias myModel: myModel
-//    property int lastIndex: 0
+    property string foreground: Material.foreground
 
     id: bar
     currentIndex: 0
@@ -39,7 +38,7 @@ TabBar {
                 text: modelText
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignBottom
-                color: Global.quaternary
+                color: bar.foreground
                 opacity: bar.currentIndex===model.index? 1:0.5
             }
             background:Image{
@@ -52,10 +51,9 @@ TabBar {
                 ColorOverlay {
                     anchors.fill: parent
                     source: parent
-                    color: Global.quaternary
+                    color: bar.foreground
+
                 }
-
-
             }
 //            onHoveredChanged: {
 //                if (model.index !== bar.currentIndex){
