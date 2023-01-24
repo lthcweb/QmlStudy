@@ -22,7 +22,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 else()
     if(ANDROID)
-        add_library(M1_Theme SHARED
+        add_library(${BIN_NAME} SHARED
         ${PROJECT_SOURCES}
         )
 # Define properties for Android with Qt 5 after find_package() calls as:

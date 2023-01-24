@@ -19,9 +19,8 @@ Page {
             }
 
             function setColorMode(){
-                Global.themeMode = position===0 ? 0:1
                 M.Colors.currentTheme = position===0 ? M.Colors.themes.light : M.Colors.themes.dark
-
+                Global.themeMode = position===0 ? 0:1
             }
         }
 
@@ -29,6 +28,7 @@ Page {
             RadioButton { text: qsTr("Small") }
             RadioButton { text: qsTr("Medium");  checked: true }
             RadioButton { text: qsTr("Large") }
+            RadioButton { text: qsTr("Huge") }
         }
     }
 

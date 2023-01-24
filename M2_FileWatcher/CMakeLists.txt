@@ -21,7 +21,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 #    set_property(TARGET Starter7 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
 # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
-    qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+#    qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 else()
     if(ANDROID)
         add_library(M2_FileWatcher SHARED
@@ -61,6 +61,13 @@ set_target_properties(M2_FileWatcher PROPERTIES
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
+
+
+
+#install(TARGETS M2_FileWatcher
+#    BUNDLE DESTINATION .
+#    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_import_qml_plugins(${CMAKE_CURRENT_SOURCE_DIR})

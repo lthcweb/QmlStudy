@@ -8,7 +8,11 @@ project(${CMAKE_CURRENT_SOURCE_DIR} VERSION 1.0.0 LANGUAGES CXX)
 # 如果采用非Qt Creator开发，需要通过告知Qt的安装路径，建议把Qt的安装路径设置到环境变量
 # 例如：QT_DIR=D:\Qt\6.1.2\msvc2019_64
 # 加入系统Path里也行
-set(QT_DIR "D:/Development/QT/5.15.2/mingw81_64")
+if(ANDROID)
+    set(QT_DIR "D:/Development/QT/5.15.2/android")
+else()
+    set(QT_DIR "D:/Development/QT/5.15.2/mingw81_64")
+endif()
 set(CMAKE_PREFIX_PATH $ENV{QT_DIR})
 
 # 有些项目会动态生成头文件，项目中需要引入它，因此需要将output目录也include进来
@@ -25,10 +29,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # 指定输出路径
+if(WIN32)
 SET(OUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 # 如果输入路径不存在，则创建
 if (NOT EXISTS ${OUT_PATH})
     file(MAKE_DIRECTORY ${OUT_PATH})
+endif()
 endif ()
 
 # 指定执行文件目录，指定Lib文件目录
@@ -47,11 +53,13 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick QuickControls2
 # 子项目
 #add_subdirectory(Starter5)
 #add_subdirectory(P18_Signal)
-#add_subdirectory(P20_QmlAndC++)
+add_subdirectory(P20_QmlAndC++)
 #add_subdirectory(P25_Layout)
 #add_subdirectory(P26_CustomGrid)
 #add_subdirectory(P29_CustomModel)
 #add_subdirectory(P30_ChartView_PieSeries)
 #add_subdirectory("E:\\QTProject\\Projets\\App\\qmlStudy\\XQuick" ${OUT_PATH})
-add_subdirectory("E:\\QTProject\\Common\\MTheme" ${OUT_PATH})
-add_subdirectory(M3_Theme)
+#add_subdirectory("E:\\QTProject\\Common\\MTheme" ${OUT_PATH})
+#add_subdirectory(M1_Plugin)
+#add_subdirectory(M2_FileWatcher)
+#add_subdirectory(M3_Theme)

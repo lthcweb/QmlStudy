@@ -1,16 +1,9 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtQuick.Window 2.15
 import QtQuick.Controls.Material 2.15
-import QtQuick.Templates 2.15 as T
-import QtQuick.Controls.impl 2.12
-import QtQuick.Controls.Material.impl 2.12
-import Qt.labs.settings 1.1
-import MTheme 1.0 as M
-import "."
+
 import "./Pages"
 import "./Components"
-
 
 Page {
     id:mainPage
@@ -27,34 +20,14 @@ Page {
 
     footer:NavigationBar{
         id:navigationBar
+        foreground:Global.quaternary
     }
 
-    SwipeView {
-        id: view
-        anchors.fill: parent
-        width: parent.width
+    MainPage{
         currentIndex: navigationBar.currentIndex
-
-        MediaPage{
-
-        }
-        PlayListPage{
-
-        }
-
-        PlayPage{
-
-        }
-        DownloadPage{
-
-        }
-
-        SettingsPage{
-            id:settingsPage
-
-        }
-
     }
+ }
+
 
 //Rectangle {
 ////    color:'grey'
@@ -118,5 +91,5 @@ Page {
 
 
 //}
-}
+
 

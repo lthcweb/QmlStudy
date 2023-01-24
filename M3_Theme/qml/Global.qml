@@ -1,10 +1,7 @@
 import QtQuick 2.15
-import QtQml 2.15
-import QtQuick.Controls.Material 2.15
-import MTheme 1.0 as M
 import Qt.labs.settings 1.1
 
-
+import MTheme 1.0 as M
 
 pragma Singleton
 QtObject {
@@ -19,7 +16,7 @@ QtObject {
     readonly property string tertiary: M.Colors.tertiary
     readonly property string quaternary: M.Colors.quaternary
 
-    property var settings:Settings {
+    property var settings: Settings {
         id:settings
         category: "Theme"
         fileName: global.settingsFileName

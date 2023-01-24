@@ -35,20 +35,26 @@ int main(int argc, char *argv[])
     }, Qt::QueuedConnection);
 
 
-
-//  方法一：全局对象，上下文对象，一般不用
+//  qml绑定c++方法一：全局对象，上下文对象，一般不用
     QQmlContext* context = engine.rootContext();
+
+    // 示例，绑定常量，可以qml中全局使用
     QScreen *screen = QGuiApplication::primaryScreen();
     QRect rect = screen->virtualGeometry();
     context->setContextProperty("SCREEN_WIDTH",rect.width()/3);
 
-//    MyObject obj;
-//    context->setContextProperty("MyObject",&obj);
+    //示例 绑定类
+    MyObject obj;
+    context->setContextProperty("MyObject",&obj);
 
-//    方法二，常用方法
+
+//    qml绑定c++方法二，常用方法
     qmlRegisterType<MyObject>("MyObj",1,0,"MyObject");
 
 
+
+    // c++->qml 绑定槽函数的方法一
+    // 在qml中用Connections
 
     // c++->qml 绑定槽函数的方法二
     qmlRegisterSingletonInstance("MyObj",1,0,"MyObject1",MyObject::getInstance());

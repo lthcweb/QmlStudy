@@ -10,5 +10,6 @@
         <file>Pages/MediaPage.qml</file>
         <file>Pages/PlayListPage.qml</file>
         <file>Pages/PlayPage.qml</file>
+        <file>Pages/MainPage.qml</file>
     </qresource>
 </RCC>
